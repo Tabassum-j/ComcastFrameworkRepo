@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testng-results ignored="0" total="1" passed="1" failed="0" skipped="0">
+  <reporter-output>
+  </reporter-output>
+  <suite started-at="2025-04-24T22:38:17 IST" name="Suite" finished-at="2025-04-24T22:38:45 IST" duration-ms="28113">
+    <groups>
+      <group name="RegressionTest">
+        <method signature="AddNewEmployee.AddNewEmployeeAndVerify()[pri:0, instance:integrationTestCase.AddNewEmployee@38c6f217]" name="AddNewEmployeeAndVerify" class="integrationTestCase.AddNewEmployee"/>
+      </group> <!-- RegressionTest -->
+    </groups>
+    <test started-at="2025-04-24T22:38:17 IST" name="Test" finished-at="2025-04-24T22:38:45 IST" duration-ms="28113">
+      <class name="integrationTestCase.AddNewEmployee">
+        <test-method is-config="true" signature="configBeforeSuite()[pri:0, instance:integrationTestCase.AddNewEmployee@38c6f217]" started-at="2025-04-24T22:38:17 IST" name="configBeforeSuite" finished-at="2025-04-24T22:38:17 IST" duration-ms="382" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- configBeforeSuite -->
+        <test-method is-config="true" signature="configBeforeClass()[pri:0, instance:integrationTestCase.AddNewEmployee@38c6f217]" started-at="2025-04-24T22:38:17 IST" name="configBeforeClass" finished-at="2025-04-24T22:38:18 IST" duration-ms="1163" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- configBeforeClass -->
+        <test-method is-config="true" signature="configBeforeMethod()[pri:0, instance:integrationTestCase.AddNewEmployee@38c6f217]" started-at="2025-04-24T22:38:18 IST" name="configBeforeMethod" finished-at="2025-04-24T22:38:18 IST" duration-ms="1" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- configBeforeMethod -->
+        <test-method signature="AddNewEmployeeAndVerify()[pri:0, instance:integrationTestCase.AddNewEmployee@38c6f217]" started-at="2025-04-24T22:38:18 IST" name="AddNewEmployeeAndVerify" finished-at="2025-04-24T22:38:45 IST" duration-ms="26774" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- AddNewEmployeeAndVerify -->
+        <test-method is-config="true" signature="configAfterMethod()[pri:0, instance:integrationTestCase.AddNewEmployee@38c6f217]" started-at="2025-04-24T22:38:45 IST" name="configAfterMethod" finished-at="2025-04-24T22:38:45 IST" duration-ms="1" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- configAfterMethod -->
+        <test-method is-config="true" signature="configAfterClass()[pri:0, instance:integrationTestCase.AddNewEmployee@38c6f217]" started-at="2025-04-24T22:38:45 IST" name="configAfterClass" finished-at="2025-04-24T22:38:45 IST" duration-ms="149" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- configAfterClass -->
+        <test-method is-config="true" signature="configAfterSuite()[pri:0, instance:integrationTestCase.AddNewEmployee@38c6f217]" started-at="2025-04-24T22:38:45 IST" name="configAfterSuite" finished-at="2025-04-24T22:38:45 IST" duration-ms="2" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- configAfterSuite -->
+      </class> <!-- integrationTestCase.AddNewEmployee -->
+    </test> <!-- Test -->
+  </suite> <!-- Suite -->
+</testng-results>
