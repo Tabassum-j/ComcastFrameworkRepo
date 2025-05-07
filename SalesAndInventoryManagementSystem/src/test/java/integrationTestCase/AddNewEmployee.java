@@ -4,8 +4,8 @@ import java.io.IOException;
 
 import org.apache.poi.EncryptedDocumentException;
 import org.openqa.selenium.By;
-import org.openqa.selenium.Keys;
 import org.testng.Assert;
+import org.testng.annotations.Listeners;
 import org.testng.annotations.Test;
 
 import objectRepository.AddNewEmployeePopUP;
@@ -13,7 +13,7 @@ import objectRepository.AdminHomePage;
 import objectRepository.EmployeeDetailsPage;
 import objectRepository.LoginPage;
 import baseClassUtility.BaseClass;
-
+@Listeners(listnerUtility.ListnerImplClass.class)
 public class AddNewEmployee extends BaseClass {
 	@Test(groups="RegressionTest")
 	public void AddNewEmployeeAndVerify() throws EncryptedDocumentException, IOException, InterruptedException {
@@ -21,10 +21,6 @@ public class AddNewEmployee extends BaseClass {
 		
 		//Read test script data from excel
 		String FIRSTNAME = elib.getDataFromExcel("IntegrationTestCase", 5, 0);
-		String LASTNAME = elib.getDataFromExcel("IntegrationTestCase", 5, 1);
-		String EMAIL = elib.getDataFromExcel("IntegrationTestCase", 5, 2);
-		String PHONENUMBER = elib.getDataFromExcel("IntegrationTestCase", 5, 3);
-		String HIREDATE = elib.getDataFromExcel("IntegrationTestCase",5 ,4 );
 		
 		 LoginPage lp = new LoginPage(driver);
 		 lp.loginAsAdmin();
@@ -43,27 +39,8 @@ public class AddNewEmployee extends BaseClass {
 		  Thread.sleep(2000);
 		  AddNewEmployeePopUP anep= new AddNewEmployeePopUP(driver);
 		  Thread.sleep(2000);
-		  wlib.waitForElementPresent(driver,anep.getFirstNameEdt()); 
-		  anep.getFirstNameEdt().sendKeys(FIRSTNAME);
-		  wlib.waitForElementPresent(driver,anep.getLastNameEdt());
-		  anep.getLastNameEdt().sendKeys(LASTNAME);
-		  wlib.waitForElementPresent(driver,anep.getGenderDD());
-		  wlib.select(anep.getGenderDD(),"Male");
-		  wlib.waitForElementPresent(driver,anep.getEmailEdt());
-		  anep.getEmailEdt().sendKeys(EMAIL);
-		  wlib.waitForElementPresent(driver,anep.getPhonenumberEdt());
-		  anep.getPhonenumberEdt().sendKeys(PHONENUMBER+jlib.getRandomNumber());
-		  wlib.waitForElementPresent(driver,anep.getJobsDD());
-		  wlib.select(anep.getJobsDD(),"Manager");
-		  anep.getJobsDD().sendKeys(Keys.TAB);
-		  Thread.sleep(3000);
-		  wlib.waitForElementPresent(driver,anep.getHireddateEdt());
-		  anep.getHireddateEdt().sendKeys(HIREDATE.toString());
-		  wlib.waitForElementPresent(driver,anep.getProvinceDD());
-		  wlib.select(anep.getProvinceDD(), "Abra");
-		  wlib.waitForElementPresent(driver,anep.getCityDD());
-		  wlib.select(anep.getCityDD(),"Pilar"); 
-		  anep.getSaveBtn().click();
+		  anep.employeeData();
+			
 		  
 		  // Search the employee detail 
 		  edp.getsearchEdt().sendKeys(FIRSTNAME); 

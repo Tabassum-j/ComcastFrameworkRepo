@@ -4,6 +4,7 @@ import java.io.IOException;
 
 import org.apache.poi.EncryptedDocumentException;
 import org.openqa.selenium.interactions.Actions;
+import org.testng.annotations.Listeners;
 import org.testng.annotations.Test;
 
 import objectRepository.AddNewCustomerPopup;
@@ -14,7 +15,7 @@ import objectRepository.PointOfSalesPage;
 import objectRepository.ProductCategoryPage;
 import objectRepository.UserHomePage;
 import baseClassUtility.BaseClass;
-
+@Listeners(listnerUtility.ListnerImplClass.class)
 public class AddNewCustomerAndVerifyInUserPage extends BaseClass{
 	
 	@Test (groups="RegressionTest")
@@ -23,11 +24,6 @@ public class AddNewCustomerAndVerifyInUserPage extends BaseClass{
 		
 		 LoginPage lp = new LoginPage(driver);
 		    lp.loginAsAdmin();
-		
-		//Read data from excel
-		String FIRSTNAME = elib.getDataFromExcel("IntegrationTestCase",9 , 0);
-		String LASTNAME = elib.getDataFromExcel("IntegrationTestCase", 9, 1);
-		String PHONENUMBER = elib.getDataFromExcel("IntegrationTestCase",9, 2);
 		
 		//Navigate to customer page
 		AdminHomePage ahp = new AdminHomePage(driver);
@@ -43,13 +39,8 @@ public class AddNewCustomerAndVerifyInUserPage extends BaseClass{
 		
 		//Enter Customer details 
 		AddNewCustomerPopup ancp = new AddNewCustomerPopup(driver);
-		wlib.waitForElementPresent(driver,ancp.getFirstNameEdt());
-		ancp.getFirstNameEdt().sendKeys(FIRSTNAME);
-		wlib.waitForElementPresent(driver, ancp.getLasstNameEdt());
-		ancp.getLasstNameEdt().sendKeys(LASTNAME);
-		wlib.waitForElementPresent(driver,ancp.getPhoneNumberEdt());
-		ancp.getPhoneNumberEdt().sendKeys(PHONENUMBER);
-		wlib.javaScriptclickOnWE(driver, ancp.getsaveBtn());
+		
+		ancp.addCustomer();
 		
 		
 		ahp.logoutAsAdmin();

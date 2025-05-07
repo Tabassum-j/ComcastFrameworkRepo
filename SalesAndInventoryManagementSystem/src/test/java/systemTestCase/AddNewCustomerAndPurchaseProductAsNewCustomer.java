@@ -4,6 +4,7 @@ import java.io.IOException;
 
 import org.apache.poi.EncryptedDocumentException;
 import org.openqa.selenium.interactions.Actions;
+import org.testng.annotations.Listeners;
 import org.testng.annotations.Test;
 
 import objectRepository.AddNewCustomerPopup;
@@ -15,16 +16,12 @@ import objectRepository.ProductCategoryPage;
 import objectRepository.SummaryPage;
 import objectRepository.UserHomePage;
 import baseClassUtility.BaseClass;
-
+@Listeners(listnerUtility.ListnerImplClass.class)
 public class AddNewCustomerAndPurchaseProductAsNewCustomer extends BaseClass {
 	
 	@Test(groups={"SmokeTest", "RegressionTest"})
 	public void addNewCustomer() throws EncryptedDocumentException, IOException, InterruptedException {
-		//Read data from excel
-				String FIRSTNAME = elib.getDataFromExcel("SystemTestCase",1 , 0);
-				String LASTNAME = elib.getDataFromExcel("SystemTestCase", 1, 1);
-				String PHONENUMBER = elib.getDataFromExcel("SystemTestCase",1, 2);
-				
+		
 				LoginPage lp = new LoginPage(driver);
 			    lp.loginAsAdmin();
 				
@@ -43,12 +40,15 @@ public class AddNewCustomerAndPurchaseProductAsNewCustomer extends BaseClass {
 				
 				//Click on add new Customer
 				AddNewCustomerPopup ancp = new AddNewCustomerPopup(driver);
-				wlib.waitForElementPresent(driver,ancp.getFirstNameEdt() );
-				ancp.getFirstNameEdt().sendKeys(FIRSTNAME);
-				wlib.waitForElementPresent(driver, ancp.getLasstNameEdt());
-				ancp.getLasstNameEdt().sendKeys(LASTNAME);
-				wlib.waitForElementPresent(driver,ancp.getPhoneNumberEdt() );
-				ancp.getPhoneNumberEdt().sendKeys(PHONENUMBER);
+				/*
+				 * wlib.waitForElementPresent(driver,ancp.getFirstNameEdt() );
+				 * ancp.getFirstNameEdt().sendKeys(FIRSTNAME);
+				 * wlib.waitForElementPresent(driver, ancp.getLasstNameEdt());
+				 * ancp.getLasstNameEdt().sendKeys(LASTNAME);
+				 * wlib.waitForElementPresent(driver,ancp.getPhoneNumberEdt() );
+				 * ancp.getPhoneNumberEdt().sendKeys(PHONENUMBER);
+				 */
+				ancp.customerInfo();
 				wlib.javaScriptclickOnWE(driver, ancp.getsaveBtn());
 				
 				ahp.logoutAsAdmin();

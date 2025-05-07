@@ -1,7 +1,10 @@
 package systemTestCase;
 
+import java.io.IOException;
+
 import org.openqa.selenium.By;
 import org.openqa.selenium.Keys;
+import org.testng.annotations.Listeners;
 import org.testng.annotations.Test;
 
 import objectRepository.AdminHomePage;
@@ -12,11 +15,11 @@ import objectRepository.SummaryPage;
 import objectRepository.TransactionPage;
 import objectRepository.UserHomePage;
 import baseClassUtility.BaseClass;
-
+@Listeners(listnerUtility.ListnerImplClass.class)
 
 public class TransactionDetails extends BaseClass {
 	@Test(groups="RegressionTest")
-	public void verifyTransactionDetails() throws InterruptedException {
+	public void verifyTransactionDetails() throws InterruptedException, IOException {
 		
 		//Login as user
 		LoginPage lp = new LoginPage(driver);

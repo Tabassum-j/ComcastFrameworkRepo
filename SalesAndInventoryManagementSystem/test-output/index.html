@@ -51,7 +51,7 @@
               <ul>
                 <li>
                   <a href="#" panel-name="test-xml-Suite" class="navigator-link ">
-                    <span>C:\JCO-JFFCJD-A52\SalesAndInventoryManagementSystem\Listners.testng.xml</span>
+                    <span>C:\Users\Javeedulla Khan\git\repository4\SalesAndInventoryManagementSystem\smokeGroup.xml</span>
                   </a> <!-- navigator-link  -->
                 </li>
                 <li>
@@ -61,7 +61,7 @@
                 </li>
                 <li>
                   <a href="#" panel-name="group-Suite" class="navigator-link ">
-                    <span>1 group</span>
+                    <span>2 groups</span>
                   </a> <!-- navigator-link  -->
                 </li>
                 <li>
@@ -93,7 +93,7 @@
               <div class="suite-section-content">
                 <ul>
                   <li>
-                    <span class="method-stats">1 method,   1 passed</span>
+                    <span class="method-stats">3 methods,   3 passed</span>
                   </li>
                   <li>
                     <span class="method-list-title passed">Passed methods</span>
@@ -104,7 +104,17 @@
                     <div class="method-list-content passed suite-Suite">
                       <span>
                         <img src="passed.png" width="3%"/>
-                        <a href="#" panel-name="suite-Suite" title="integrationTestCase.AddNewEmployee" class="method navigator-link" hash-for-method="AddNewEmployeeAndVerify">AddNewEmployeeAndVerify</a> <!-- method navigator-link -->
+                        <a href="#" panel-name="suite-Suite" title="smokeTestCase.AdminSupplierModule" class="method navigator-link" hash-for-method="adminSupplierModule">adminSupplierModule</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Suite" title="smokeTestCase.AdminLogin" class="method navigator-link" hash-for-method="loginAsAdmin">loginAsAdmin</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Suite" title="smokeTestCase.UserPurchaseProduct" class="method navigator-link" hash-for-method="userPurchase">userPurchase</a> <!-- method navigator-link -->
                       </span>
                       <br/>
                     </div> <!-- method-list-content passed suite-Suite -->
@@ -122,14 +132,44 @@
           <div class="suite-Suite-class-passed">
             <div class="main-panel-header rounded-window-top">
               <img src="passed.png"/>
-              <span class="class-name">integrationTestCase.AddNewEmployee</span>
+              <span class="class-name">smokeTestCase.AdminLogin</span>
             </div> <!-- main-panel-header rounded-window-top -->
             <div class="main-panel-content rounded-window-bottom">
               <div class="method">
                 <div class="method-content">
-                  <a name="AddNewEmployeeAndVerify">
-                  </a> <!-- AddNewEmployeeAndVerify -->
-                  <span class="method-name">AddNewEmployeeAndVerify</span>
+                  <a name="loginAsAdmin">
+                  </a> <!-- loginAsAdmin -->
+                  <span class="method-name">loginAsAdmin</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+            </div> <!-- main-panel-content rounded-window-bottom -->
+          </div> <!-- suite-Suite-class-passed -->
+          <div class="suite-Suite-class-passed">
+            <div class="main-panel-header rounded-window-top">
+              <img src="passed.png"/>
+              <span class="class-name">smokeTestCase.AdminSupplierModule</span>
+            </div> <!-- main-panel-header rounded-window-top -->
+            <div class="main-panel-content rounded-window-bottom">
+              <div class="method">
+                <div class="method-content">
+                  <a name="adminSupplierModule">
+                  </a> <!-- adminSupplierModule -->
+                  <span class="method-name">adminSupplierModule</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+            </div> <!-- main-panel-content rounded-window-bottom -->
+          </div> <!-- suite-Suite-class-passed -->
+          <div class="suite-Suite-class-passed">
+            <div class="main-panel-header rounded-window-top">
+              <img src="passed.png"/>
+              <span class="class-name">smokeTestCase.UserPurchaseProduct</span>
+            </div> <!-- main-panel-header rounded-window-top -->
+            <div class="main-panel-content rounded-window-bottom">
+              <div class="method">
+                <div class="method-content">
+                  <a name="userPurchase">
+                  </a> <!-- userPurchase -->
+                  <span class="method-name">userPurchase</span>
                 </div> <!-- method-content -->
               </div> <!-- method -->
             </div> <!-- main-panel-content rounded-window-bottom -->
@@ -137,19 +177,18 @@
         </div> <!-- panel Suite -->
         <div panel-name="test-xml-Suite" class="panel">
           <div class="main-panel-header rounded-window-top">
-            <span class="header-content">C:\JCO-JFFCJD-A52\SalesAndInventoryManagementSystem\Listners.testng.xml</span>
+            <span class="header-content">C:\Users\Javeedulla Khan\git\repository4\SalesAndInventoryManagementSystem\smokeGroup.xml</span>
           </div> <!-- main-panel-header rounded-window-top -->
           <div class="main-panel-content rounded-window-bottom">
             <pre>
 &lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;
 &lt;!DOCTYPE suite SYSTEM &quot;https://testng.org/testng-1.0.dtd&quot;&gt;
 &lt;suite name=&quot;Suite&quot; guice-stage=&quot;DEVELOPMENT&quot;&gt;
-  &lt;listeners&gt;
-    &lt;listener class-name=&quot;listnerUtility.ListnerImplClass&quot;/&gt;
-  &lt;/listeners&gt;
   &lt;test thread-count=&quot;5&quot; name=&quot;Test&quot;&gt;
     &lt;classes&gt;
-      &lt;class name=&quot;integrationTestCase.AddNewEmployee&quot;/&gt;
+      &lt;class name=&quot;smokeTestCase.AdminLogin&quot;/&gt;
+      &lt;class name=&quot;smokeTestCase.AdminSupplierModule&quot;/&gt;
+      &lt;class name=&quot;smokeTestCase.UserPurchaseProduct&quot;/&gt;
     &lt;/classes&gt;
   &lt;/test&gt; &lt;!-- Test --&gt;
 &lt;/suite&gt; &lt;!-- Suite --&gt;
@@ -163,7 +202,7 @@
           <div class="main-panel-content rounded-window-bottom">
             <ul>
               <li>
-                <span class="test-name">Test (1 class)</span>
+                <span class="test-name">Test (3 classes)</span>
               </li>
             </ul>
           </div> <!-- main-panel-content rounded-window-bottom -->
@@ -174,10 +213,22 @@
           </div> <!-- main-panel-header rounded-window-top -->
           <div class="main-panel-content rounded-window-bottom">
             <div class="test-group">
-              <span class="test-group-name">RegressionTest</span>
+              <span class="test-group-name">SmokeTest</span>
               <br/>
               <div class="method-in-group">
-                <span class="method-in-group-name">AddNewEmployeeAndVerify</span>
+                <span class="method-in-group-name">adminSupplierModule</span>
+                <br/>
+              </div> <!-- method-in-group -->
+            </div> <!-- test-group -->
+            <div class="test-group">
+              <span class="test-group-name">smokeTest</span>
+              <br/>
+              <div class="method-in-group">
+                <span class="method-in-group-name">loginAsAdmin</span>
+                <br/>
+              </div> <!-- method-in-group -->
+              <div class="method-in-group">
+                <span class="method-in-group-name">userPurchase</span>
                 <br/>
               </div> <!-- method-in-group -->
             </div> <!-- test-group -->
@@ -197,16 +248,24 @@ data.addColumn('number', 'Number');
 data.addColumn('string', 'Method');
 data.addColumn('string', 'Class');
 data.addColumn('number', 'Time (ms)');
-data.addRows(1);
+data.addRows(3);
 data.setCell(0, 0, 0)
-data.setCell(0, 1, 'AddNewEmployeeAndVerify')
-data.setCell(0, 2, 'integrationTestCase.AddNewEmployee')
-data.setCell(0, 3, 26774);
+data.setCell(0, 1, 'userPurchase')
+data.setCell(0, 2, 'smokeTestCase.UserPurchaseProduct')
+data.setCell(0, 3, 15590);
+data.setCell(1, 0, 1)
+data.setCell(1, 1, 'adminSupplierModule')
+data.setCell(1, 2, 'smokeTestCase.AdminSupplierModule')
+data.setCell(1, 3, 12210);
+data.setCell(2, 0, 2)
+data.setCell(2, 1, 'loginAsAdmin')
+data.setCell(2, 2, 'smokeTestCase.AdminLogin')
+data.setCell(2, 3, 11677);
 window.suiteTableData['Suite']= { tableData: data, tableDiv: 'times-div-Suite'}
 return data;
 }
               </script>
-              <span class="suite-total-time">Total running time: 26 seconds</span>
+              <span class="suite-total-time">Total running time: 39 seconds</span>
               <div id="times-div-Suite">
               </div> <!-- times-div-Suite -->
             </div> <!-- times-div -->
@@ -221,9 +280,27 @@ return data;
         </div> <!-- panel -->
         <div panel-name="ignored-methods-Suite" class="panel">
           <div class="main-panel-header rounded-window-top">
-            <span class="header-content">0 ignored methods</span>
+            <span class="header-content">4 ignored methods</span>
           </div> <!-- main-panel-header rounded-window-top -->
           <div class="main-panel-content rounded-window-bottom">
+            <div class="ignored-class-div">
+              <span class="ignored-class-name">smokeTestCase.AdminSupplierModule</span>
+              <div class="ignored-methods-div">
+                <span class="ignored-method-name">configBeforeSuite</span>
+                <br/>
+                <span class="ignored-method-name">configAfterSuite</span>
+                <br/>
+              </div> <!-- ignored-methods-div -->
+            </div> <!-- ignored-class-div -->
+            <div class="ignored-class-div">
+              <span class="ignored-class-name">smokeTestCase.UserPurchaseProduct</span>
+              <div class="ignored-methods-div">
+                <span class="ignored-method-name">configBeforeSuite</span>
+                <br/>
+                <span class="ignored-method-name">configAfterSuite</span>
+                <br/>
+              </div> <!-- ignored-methods-div -->
+            </div> <!-- ignored-class-div -->
           </div> <!-- main-panel-content rounded-window-bottom -->
         </div> <!-- panel -->
         <div panel-name="chronological-Suite" class="panel">
@@ -232,34 +309,83 @@ return data;
           </div> <!-- main-panel-header rounded-window-top -->
           <div class="main-panel-content rounded-window-bottom">
             <div class="chronological-class">
-              <div class="chronological-class-name">integrationTestCase.AddNewEmployee</div> <!-- chronological-class-name -->
+              <div class="chronological-class-name">smokeTestCase.AdminLogin</div> <!-- chronological-class-name -->
               <div class="configuration-suite before">
                 <span class="method-name">configBeforeSuite</span>
                 <span class="method-start">0 ms</span>
               </div> <!-- configuration-suite before -->
               <div class="configuration-class before">
-                <span class="method-name">configBeforeClass</span>
-                <span class="method-start">396 ms</span>
+                <span class="method-name">configBeforeClass(chrome)</span>
+                <span class="method-start">330 ms</span>
               </div> <!-- configuration-class before -->
               <div class="configuration-method before">
                 <span class="method-name">configBeforeMethod</span>
-                <span class="method-start">1567 ms</span>
+                <span class="method-start">1480 ms</span>
               </div> <!-- configuration-method before -->
               <div class="test-method">
-                <span class="method-name">AddNewEmployeeAndVerify</span>
-                <span class="method-start">1568 ms</span>
+                <span class="method-name">loginAsAdmin</span>
+                <span class="method-start">1788 ms</span>
               </div> <!-- test-method -->
-              <div class="configuration-method after">
-                <span class="method-name">configAfterMethod</span>
-                <span class="method-start">28344 ms</span>
-              </div> <!-- configuration-method after -->
               <div class="configuration-class after">
                 <span class="method-name">configAfterClass</span>
-                <span class="method-start">28346 ms</span>
+                <span class="method-start">13468 ms</span>
               </div> <!-- configuration-class after -->
+              <div class="configuration-method after">
+                <span class="method-name">configAfterMethod</span>
+                <span class="method-start">13468 ms</span>
+              </div> <!-- configuration-method after -->
+            </div> <!-- chronological-class -->
+            <div class="chronological-class">
+              <div class="chronological-class-name">smokeTestCase.AdminSupplierModule</div> <!-- chronological-class-name -->
+              <div class="configuration-class before">
+                <span class="method-name">configBeforeClass(chrome)</span>
+                <span class="method-start">13618 ms</span>
+              </div> <!-- configuration-class before -->
+              <div class="configuration-method before">
+                <span class="method-name">configBeforeMethod</span>
+                <span class="method-start">14471 ms</span>
+              </div> <!-- configuration-method before -->
+              <div class="test-method">
+                <span class="method-name">adminSupplierModule</span>
+                <span class="method-start">14715 ms</span>
+              </div> <!-- test-method -->
+              <div class="configuration-class after">
+                <span class="method-name">configAfterClass</span>
+                <span class="method-start">26927 ms</span>
+              </div> <!-- configuration-class after -->
+              <div class="configuration-method after">
+                <span class="method-name">configAfterMethod</span>
+                <span class="method-start">26927 ms</span>
+              </div> <!-- configuration-method after -->
+            </div> <!-- chronological-class -->
+            <div class="chronological-class">
+              <div class="chronological-class-name">smokeTestCase.UserPurchaseProduct</div> <!-- chronological-class-name -->
+              <div class="configuration-class before">
+                <span class="method-name">configBeforeClass(chrome)</span>
+                <span class="method-start">27063 ms</span>
+              </div> <!-- configuration-class before -->
+              <div class="configuration-method before">
+                <span class="method-name">configBeforeMethod</span>
+                <span class="method-start">27959 ms</span>
+              </div> <!-- configuration-method before -->
+              <div class="test-method">
+                <span class="method-name">userPurchase</span>
+                <span class="method-start">28220 ms</span>
+              </div> <!-- test-method -->
+              <div class="configuration-class after">
+                <span class="method-name">configAfterClass</span>
+                <span class="method-start">43811 ms</span>
+              </div> <!-- configuration-class after -->
+              <div class="configuration-method after">
+                <span class="method-name">configAfterMethod</span>
+                <span class="method-start">43811 ms</span>
+              </div> <!-- configuration-method after -->
+            </div> <!-- chronological-class -->
+            <div class="chronological-class">
+              <div class="chronological-class-name">smokeTestCase.AdminLogin</div> <!-- chronological-class-name -->
               <div class="configuration-suite after">
                 <span class="method-name">configAfterSuite</span>
-                <span class="method-start">28508 ms</span>
+                <span class="method-start">43953 ms</span>
               </div> <!-- configuration-suite after -->
           </div> <!-- main-panel-content rounded-window-bottom -->
         </div> <!-- panel -->

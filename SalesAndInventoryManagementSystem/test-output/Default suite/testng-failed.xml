@@ -3,17 +3,17 @@
 <suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="integrationTestCase.AddNewEmployee">
+      <class name="smokeTestCase.AdminLogin">
         <methods>
           <include name="configBeforeSuite"/>
-          <include name="AddNewEmployeeAndVerify"/>
+          <include name="loginAsAdmin"/>
           <include name="configBeforeMethod"/>
           <include name="configAfterMethod"/>
           <include name="configAfterClass"/>
           <include name="configBeforeClass"/>
           <include name="configAfterSuite"/>
         </methods>
-      </class> <!-- integrationTestCase.AddNewEmployee -->
+      </class> <!-- smokeTestCase.AdminLogin -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->

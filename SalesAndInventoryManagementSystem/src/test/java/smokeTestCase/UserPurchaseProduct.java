@@ -1,5 +1,8 @@
 package smokeTestCase;
 
+import java.io.IOException;
+
+import org.testng.annotations.Listeners;
 import org.testng.annotations.Test;
 
 import objectRepository.LoginPage;
@@ -8,10 +11,10 @@ import objectRepository.ProductCategoryPage;
 import objectRepository.SummaryPage;
 import objectRepository.UserHomePage;
 import baseClassUtility.BaseClass;
-
+@Listeners(listnerUtility.ListnerImplClass.class)
 public class UserPurchaseProduct extends BaseClass {
 	@Test(groups = "smokeTest")
-	public void userPurchase() throws InterruptedException {
+	public void userPurchase() throws InterruptedException, IOException {
 
 		LoginPage lp = new LoginPage(driver);
 		lp.loginAsUser();

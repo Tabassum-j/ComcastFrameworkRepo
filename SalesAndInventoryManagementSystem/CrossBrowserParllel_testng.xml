@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite thread-count="5" parallel="tests" name="Suite">
+<listeners>
+<listener class-name="listnerUtility.ListnerImplClass"></listener>
+</listeners>
+
+  <test name="Chrome-Test">
+  <parameter name="BROWSER" value="chrome"></parameter>
+    <classes>
+      <class name="smokeTestCase.AdminLogin"/>
+      <class name="integrationTestCase.AddNewCustomerAndVerifyInUserPage"/>
+      <class name="smokeTestCase.UserPurchaseProduct"/>
+      <class name="smokeTestCase.AdminSupplierModule"/>
+      <class name="integrationTestCase.AddNewEmployee"/>
+    </classes>
+  </test> <!-- Test -->
+  
+  
+  <test name="Edge-Test">
+  <parameter name="BROWSER" value="edge"></parameter>
+  <classes>
+      <class name="smokeTestCase.AdminLogin"/>
+      <class name="integrationTestCase.AddNewCustomerAndVerifyInUserPage"/>
+      <class name="smokeTestCase.UserPurchaseProduct"/>
+      <class name="smokeTestCase.AdminSupplierModule"/>
+      <class name="integrationTestCase.AddNewEmployee"/>
+    </classes>
+  </test>
+</suite> <!-- Suite -->

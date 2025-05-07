@@ -12,6 +12,7 @@ import org.testng.annotations.AfterSuite;
 import org.testng.annotations.BeforeClass;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.BeforeSuite;
+import org.testng.annotations.Optional;
 import org.testng.annotations.Parameters;
 import databaseUtility.DatabaseUtility;
 import fileUtility.ExcelUtility;
@@ -28,8 +29,8 @@ public class BaseClass {
 	public ExcelUtility elib = new ExcelUtility();
 	public WebDriverUtility wlib = new WebDriverUtility();
 	public JavaUtility jlib = new JavaUtility();
-	public WebDriver driver=null;
-	public static WebDriver sdriver = null;
+	public WebDriver driver;
+	public static WebDriver sdriver;
 	
 	@BeforeSuite(groups= {"SmokeTest", "RegressionTest"})
 	public void configBeforeSuite() throws SQLException {
@@ -38,8 +39,8 @@ public class BaseClass {
 	}
 	@Parameters("BROWSER")
 	@BeforeClass(groups= {"SmokeTest", "RegressionTest"})
-	public void configBeforeClass() throws IOException {
-		String BROWSER = flib.getDataFromPropertiesFile("browser");
+	public void configBeforeClass(@Optional("chrome")String browser) throws IOException {
+		String BROWSER = browser;//flib.getDataFromPropertiesFile("browser");
 		if(BROWSER.equalsIgnoreCase("chrome")) {
 			driver = new ChromeDriver();
 		}else if(BROWSER.equalsIgnoreCase("edge")) {
@@ -54,8 +55,11 @@ public class BaseClass {
 	
 	@BeforeMethod(groups = {"SmokeTest", "RegressionTest"})
 	public void configBeforeMethod() throws IOException, InterruptedException {
-		
-		System.out.println("Login to application");		
+		//flib.getDatFromPropertiesFileUrl()
+		String URL=flib.getDatFromPropertiesFileUrl("url");
+		System.out.println("Login to application");	
+		System.out.println(URL);
+		driver.get(URL);
 	}
 	@AfterMethod(groups = {"SmokeTest", "RegressionTest"})
 	public void configAfterMethod() throws InterruptedException {

@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+
+<suite thread-count="5" parallel="tests" name="Suite">
+
+<listeners>
+<listener class-name="listnerUtility.ListnerImplClass"></listener>
+</listeners>
+
+  <test name="Test-1">
+    <classes>
+      <class name="smokeTestCase.AdminLogin"/>
+      </classes>
+      </test>
+      
+       <test name="Test-2">
+       <classes>
+      <class name="integrationTestCase.AddNewCustomerAndVerifyInUserPage"/>
+      </classes>
+      </test>
+      
+       <test  name="Test-3">
+      <classes>
+      <class name="systemTestCase.TransactionDetails"/>
+      </classes>
+      </test>
+      
+       <test  name="Test-4">
+      <classes>
+      <class name="systemTestCase.EditCustomerDetails"/>
+      </classes>
+      </test>
+      
+       <test name="Test-5">
+      <classes>
+      <class name="smokeTestCase.UserPurchaseProduct"/>
+      </classes>
+       </test>
+       
+       </suite> 

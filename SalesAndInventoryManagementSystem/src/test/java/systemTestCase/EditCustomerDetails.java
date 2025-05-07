@@ -4,6 +4,7 @@ import java.io.IOException;
 
 import org.apache.poi.EncryptedDocumentException;
 import org.openqa.selenium.Keys;
+import org.testng.annotations.Listeners;
 import org.testng.annotations.Test;
 
 import objectRepository.AdminHomePage;
@@ -14,14 +15,10 @@ import objectRepository.PointOfSalesPage;
 import objectRepository.ProductCategoryPage;
 import objectRepository.UserHomePage;
 import baseClassUtility.BaseClass;
-
+@Listeners(listnerUtility.ListnerImplClass.class)
 public class EditCustomerDetails extends BaseClass{
 	@Test(groups={"SmokeTest", "RegressionTest"})
 	public void editCustomerDetailsAndVerify() throws InterruptedException, EncryptedDocumentException, IOException {
-		
-		String FIRSTNAME = elib.getDataFromExcel("SystemTestCase", 4, 0);
-		String LASTNAME = elib.getDataFromExcel("SystemTestCase", 4, 1);
-		String CONTACT = elib.getDataFromExcel("SystemTestCase", 4, 2);
 		
 		LoginPage lp = new LoginPage(driver);
 	    lp.loginAsAdmin();
@@ -44,10 +41,8 @@ public class EditCustomerDetails extends BaseClass{
 	    
 	    //Edit the customer
 	    EditCustomerPage ecp = new EditCustomerPage(driver);
-	    ecp.getFirstNameEdt().sendKeys(FIRSTNAME);
-	    ecp.getLastnameEdt().sendKeys(LASTNAME);
-        ecp.getPhoneEdt().sendKeys(CONTACT);
-        ecp.getUpdateBtn().click();
+		
+	    ecp.editCustomerDetails();
         Thread.sleep(2000);
         wlib.switchToAlertAndAccept(driver);
         
